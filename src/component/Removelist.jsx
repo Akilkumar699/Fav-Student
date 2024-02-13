@@ -13,14 +13,17 @@ const Remove=()=>{
             }
         })
         setlist(removeitem)
+
+  
+
     }
 
     return(
         <div className=" w-1/5">
             {
-                list.map((item)=>{
+                list.map((item,index)=>{
                     return (
-                        <div className=" flex gap-10 items-center mt-5 mx-3">
+                        <div className=" flex gap-10 items-center mt-5 mx-3" key={index}>
                             <p className=" relative left-6">{item.Name}</p>
                             <button className=" bg-red-600 p-1 rounded-md absolute left-36" onClick={()=>{handleRemove(item.id)}}>Remove</button>
                         </div>
